@@ -1,8 +1,10 @@
 # GPT-6 Astra Universal Scan → Blender → Playable 3D Mini-Game
 
-> Inspired by Harry's demo: 360 photos of NVIDIA DGX Spark → 16 min high-fidelity Blender model → `dgx-spark-rooftop-market` playable town
+> Inspired by Harry's demo: 360 photos of NVIDIA DGX Spark → high-fidelity Blender model → `dgx-spark-rooftop-market` playable town
 
-靈感來自 哈利說 實測：用 GPT-6 Astra 16分鐘把 DGX Spark 建模成 Blender 高精度模型，再變成可玩的 Spark 小市集。
+靈感來自 哈利說 實測：用 GPT-6 Astra 把 DGX Spark 建模成 Blender 高精度模型，再變成可玩的 Spark 小市集。
+
+> 關於耗時：原始 demo 的公開說法不一致（貼文文字與此處先前引用的數字不同），本 repo 未取得原始計時證據，因此不對耗時作宣稱。實際時間依物件複雜度、照片完整度與環境而異。
 
 **[▶ 線上版（一鍵複製）](https://cycheng-max.github.io/gpt6-astra-prompts/)** · [中文版說明往下看](#中文)
 
