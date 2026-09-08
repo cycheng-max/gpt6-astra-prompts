@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GPT-6 Astra 通用 Prompt | 照片 → Blender → 可玩小遊戲</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GPT-6 Astra 通用 Prompt">
+<meta property="og:title" content="照片 → Blender → 可玩的 3D 小遊戲">
+<meta property="og:description" content="照片 → Blender 高精度模型 → 可玩的 Three.js 小遊戲。兩支可直接複製的 GPT-6 Astra prompt，含資產規格、效能驗收與執行授權上限。">
+<meta property="og:url" content="https://cycheng-max.github.io/gpt6-astra-prompts/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="照片 → Blender → 可玩的 3D 小遊戲">
+<meta name="twitter:description" content="照片 → Blender 高精度模型 → 可玩的 Three.js 小遊戲。兩支可直接複製的 GPT-6 Astra prompt，含資產規格、效能驗收與執行授權上限。">
 <meta name="description" content="從哈利說 DGX Spark 實測延伸的通用模板，360度照片 → Blender 高精度模型 → Three.js 可玩小遊戲">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -44,8 +53,7 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC',system-ui
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:28px;transition:background 0.3s,border-color 0.3s}
 .card-head{padding:20px 22px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .card-head h2{font-size:var(--fs-h3);display:flex;align-items:center;gap:10px}
-.num{background:var(--green);color:#fff;width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-micro);font-weight:700}
-[data-theme="light"] .num{color:#000}
+.num{background:var(--green);color:#000;width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:var(--fs-micro);font-weight:700}
 .card-head p{font-size:var(--fs-small);color:var(--muted);font-weight:500;letter-spacing:0.2px}
 .copy-btn{background:var(--text);color:var(--bg);border:0;padding:8px 14px;border-radius:8px;font-size:var(--fs-micro);font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:0.2s}
 .copy-btn:hover{opacity:0.85}
@@ -79,7 +87,7 @@ pre{margin:0;padding:24px 24px;overflow:auto;font-size:var(--fs-small);line-heig
 <div class="hero">
 <div class="badge">● Inspired by 哈利說 DGX Spark Demo</div>
 <h1>照片 → <span>Blender</span><br>→ 可玩的 3D 小遊戲</h1>
-<p>把 GPT-6 Astra 16 分鐘建模的流程通用化。只要換掉 <span class="mono" style="color:var(--text);background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)">{{物件名稱}}</span> 就能用，已避開 1:1 虛構與針腳亂補的坑。</p>
+<p>把 GPT-6 Astra 16 分鐘建模的流程通用化。換掉三個欄位就能用：<span class="mono" style="color:var(--text);background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)">物件名稱</span>、<span class="mono" style="color:var(--text);background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)">專案 slug</span>、<span class="mono" style="color:var(--text);background:var(--card);padding:2px 6px;border-radius:6px;border:1px solid var(--border)">場景風格</span>（Prompt 1 只用到第一個）。已避開 1:1 虛構與針腳亂補的坑。</p>
 <div class="links">
 <a class="btn btn-primary" href="https://github.com/cycheng-max/gpt6-astra-prompts" target="_blank">⭐ Star on GitHub</a>
 <a class="btn btn-ghost" href="#p1">直接複製 Prompt ↓</a>
@@ -136,7 +144,16 @@ pre{margin:0;padding:24px 24px;overflow:auto;font-size:var(--fs-small);line-heig
      - 尺寸是否有實際依據
      - 哪些細節是高信心還原
      - 哪些細節因照片不足只能估計
-9. 全程直接執行，不要只告訴我做法。若遇到阻礙，先嘗試自行排除，再繼續完成。
+9. 請在下方【安裝與執行授權】的範圍內直接執行，不要只告訴我做法。
+
+【安裝與執行授權】（上限，不可自行放寬）
+- 只能在指定的專案／輸出目錄內建立與修改檔案。不得修改該目錄以外的任何檔案。
+- 不得使用系統管理員或 sudo 權限。不得做系統層級的安裝或設定變更。
+- 需要安裝 Blender 外掛、Python 套件或任何額外元件前，先列出名稱、版本、
+  來源與用途，等我確認後再裝。
+- 網路只允許連 Blender 官方與我指定的素材來源。不要下載來路不明的檔案或腳本。
+- 「自行排除障礙」的上限：同一個問題嘗試三次仍未解決就停下來回報，
+  附完整錯誤訊息與你試過的三種做法，不要繼續無限重試。
 
 【資產規格】（硬性，不符合就算未完成）
 - 格式：glTF 2.0 binary（.glb），Y-up，單位公尺，原點在物件底部中心
@@ -302,17 +319,40 @@ toggle.addEventListener('click',()=>{
 
 // Copy
 document.querySelectorAll('.copy-btn').forEach(btn=>{
+  const orig = btn.textContent;            // 點擊前就取，連點才不會把「已複製」當原值
+  const toast = document.getElementById('toast');
+  const flash = (label, msg, done)=>{
+    clearTimeout(btn._t);                  // 連點時取消上一個還原計時器
+    btn.textContent = label;
+    btn.classList.toggle('done', done);
+    toast.textContent = msg;
+    toast.classList.add('show');
+    btn._t = setTimeout(()=>{
+      toast.classList.remove('show');
+      btn.textContent = orig;
+      btn.classList.remove('done');
+    }, 2600);
+  };
   btn.addEventListener('click',()=>{
-    const id = btn.getAttribute('data-target');
-    const code = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(code).then(()=>{
-      const orig = btn.textContent;
-      btn.textContent='✅ 已複製';
-      btn.classList.add('done');
-      const toast=document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(()=>{toast.classList.remove('show');btn.textContent=orig;btn.classList.remove('done')},1800);
-    });
+    const pre = document.getElementById(btn.getAttribute('data-target'));
+    const code = pre.innerText;
+    const fallback = ()=>{                 // 沒有剪貼簿權限時，至少幫使用者選好
+      try {
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        const r = document.createRange();
+        r.selectNodeContents(pre);
+        sel.addRange(r);
+        flash('👆 請按 Ctrl/Cmd+C', '無法自動複製，已為你選取全文，請按 Ctrl/Cmd+C', false);
+      } catch (e) {
+        flash('⚠️ 請手動選取複製', '這個瀏覽器不允許自動複製，請手動選取上方文字', false);
+      }
+    };
+    if (!navigator.clipboard || !navigator.clipboard.writeText) { fallback(); return; }
+    navigator.clipboard.writeText(code).then(
+      ()=> flash('✅ 已複製', '已複製到剪貼簿 ✓', true),
+      fallback                              // 權限被拒等失敗一律走 fallback
+    );
   });
 });
 </script>

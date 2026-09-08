@@ -4,7 +4,7 @@
 
 靈感來自 哈利說 實測：用 GPT-6 Astra 16分鐘把 DGX Spark 建模成 Blender 高精度模型，再變成可玩的 Spark 小市集。
 
-[中文版說明往下看](#中文)
+**[▶ 線上版（一鍵複製）](https://cycheng-max.github.io/gpt6-astra-prompts/)** · [中文版說明往下看](#中文)
 
 ---
 
@@ -21,9 +21,9 @@
 - Pro tips: stable light / plain background / no strong reflections / focus every shot / include scale reference
 
 ### Quick Start
-Copy `prompts/prompt-1-blender.md` to GPT-6 Astra (Computer Use mode), then `prompts/prompt-2-game.md`.
+Copy [`prompts/prompt-1-blender.md`](prompts/prompt-1-blender.md) to GPT-6 Astra (Computer Use mode), then [`prompts/prompt-2-game.md`](prompts/prompt-2-game.md). Or use the [web version](https://cycheng-max.github.io/gpt6-astra-prompts/), which has copy buttons.
 
-Examples in `examples/`:
+Examples in [`examples/`](examples/):
 - ThinkPad → cyber night market
 - Coffee Machine → cozy cafe town
 
@@ -45,7 +45,7 @@ Photo completeness > Scale reference > Computer-use permission > Blender / Web e
 重點：光線穩定 / 背景單純 / 不要強反光 / 每張都對焦 / 放尺 / 硬幣 / A4 當尺度參考
 
 ### 快速開始
-把 `prompts/prompt-1-blender.md` 貼給 GPT-6 Astra (電腦操作模式)，完成後再貼 `prompts/prompt-2-game.md`
+把 [`prompts/prompt-1-blender.md`](prompts/prompt-1-blender.md) 貼給 GPT-6 Astra（電腦操作模式），完成後再貼 [`prompts/prompt-2-game.md`](prompts/prompt-2-game.md)。也可以用[線上版](https://cycheng-max.github.io/gpt6-astra-prompts/)，有一鍵複製。
 
 ### 成功關鍵
 照片完整度 > 尺度參考 > 電腦操作權限 > Blender / Web 環境就緒
@@ -53,8 +53,9 @@ Photo completeness > Scale reference > Computer-use permission > Blender / Web e
 ---
 
 ## Prompts
-- `prompts/prompt-1-blender.md`
-- `prompts/prompt-2-game.md`
+- [`prompts/prompt-1-blender.md`](prompts/prompt-1-blender.md)
+- [`prompts/prompt-2-game.md`](prompts/prompt-2-game.md)
+- [線上版 / Web version](https://cycheng-max.github.io/gpt6-astra-prompts/)
 
 ## License
 MIT
